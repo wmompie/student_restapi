@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Form RESTApi</title>
+    <!-- no styling added -->
+    <!-- reCaptcha for testing purposes only -->
+    <script src="https://www.recaptcha.net/recaptcha/api.js" async defer"></script>
+    <script>
+      grecaptcha.ready(() => {
+        grecaptcha.render('html_element', {
+          sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Student Form RESTApi</h1>
+    <form method="POST" action="/addname">
+      <h3>Enter Your Name</h3>
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" placeholder="Enter first name..." required />
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" placeholder="Enter last name..." required />
+      <br />
+      <br />
+      <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+      <br />
+      <input type="submit" value="Add Name" />
+    </form>
+  </body>
+</html>
